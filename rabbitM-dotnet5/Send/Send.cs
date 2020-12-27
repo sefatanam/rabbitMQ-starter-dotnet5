@@ -7,16 +7,16 @@ class Send
 {
     public static void Main(string[] args)
     {
-        string keyPressed;
+
+        string? message;
         do
         {
             Write("Enter Your Message : ");
-            var message = ReadLine();
-            Write("Press [S] to send message. For exit press [enter]...");
-            keyPressed = ReadLine();
+            message = ReadLine();
+
             SendMessage(message);
         }
-        while (keyPressed != null && keyPressed.ToLower().Equals("s"));
+        while (!string.IsNullOrWhiteSpace(message));
 
     }
 
