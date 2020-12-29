@@ -11,9 +11,10 @@ namespace Consumer
     {
         static void Main(string[] args)
         {
+            Write("Waiting....");
             var factory = new ConnectionFactory()
             {
-                Uri = new Uri("amqp://guest:sefat@localhost:5672")
+                Uri = new Uri("amqp://guest:guest@localhost:5672")
             };
 
             using IConnection connection = factory.CreateConnection();
